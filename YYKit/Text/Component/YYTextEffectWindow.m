@@ -38,7 +38,7 @@
             one.frame = (CGRect){.size = kScreenSize};
             one.userInteractionEnabled = NO;
             one.windowLevel = UIWindowLevelStatusBar + 1;
-            one.hidden = NO;
+            one.hidden = YES;
             
             // for iOS 9:
             one.opaque = NO;
