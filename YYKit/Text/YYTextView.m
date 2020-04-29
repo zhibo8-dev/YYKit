@@ -2759,6 +2759,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 }
 
 - (BOOL)becomeFirstResponder {
+    [YYTextEffectWindow sharedWindow].hidden = NO;
     BOOL isFirstResponder = self.isFirstResponder;
     if (isFirstResponder) return YES;
     BOOL shouldDetectData = [self _shouldDetectText];
@@ -2791,6 +2792,7 @@ typedef NS_ENUM(NSUInteger, YYTextMoveDirection) {
 }
 
 - (BOOL)resignFirstResponder {
+    [YYTextEffectWindow sharedWindow].hidden = YES;
     BOOL isFirstResponder = self.isFirstResponder;
     if (!isFirstResponder) return YES;
     BOOL resign = [super resignFirstResponder];
