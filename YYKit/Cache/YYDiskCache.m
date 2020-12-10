@@ -351,9 +351,9 @@ static void _YYDiskCacheSetGlobal(YYDiskCache *cache) {
     });
 }
 
-- (NSInteger)totalCost {
+- (long long)totalCost {
     Lock();
-    int count = [_kv getItemsSize];
+    long long count = [_kv getItemsSize];
     Unlock();
     return count;
 }

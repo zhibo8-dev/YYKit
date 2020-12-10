@@ -318,7 +318,7 @@ typedef NS_ENUM(NSUInteger, YYKVStorageType) {
  Get item value's total size in bytes.
  @return Total size in bytes, -1 when an error occurs.
  */
-- (int)getItemsSize;
+- (long long)getItemsSize;
 
 @end
 

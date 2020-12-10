@@ -308,7 +308,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return The total objects cost in bytes.
  */
-- (NSInteger)totalCost;
+- (long long)totalCost;
 
 /**
  Get the total cost (in bytes) of objects in this cache.
