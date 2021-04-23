@@ -133,7 +133,7 @@ static void YYReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
                 CTRadioAccessTechnologyLTE : @(YYReachabilityWWANStatus4G)//LTE:3.9G 150M/75M  LTE-Advanced:4G 300M/150M
         };
         
-        if (@available(iOS 14.0, *)) {
+        if (@available(iOS 14.3, *)) {
             dic = @{CTRadioAccessTechnologyGPRS : @(YYReachabilityWWANStatus2G),  // 2.5G   171Kbps
                     CTRadioAccessTechnologyEdge : @(YYReachabilityWWANStatus2G),  // 2.75G  384Kbps
                     CTRadioAccessTechnologyWCDMA : @(YYReachabilityWWANStatus3G), // 3G     3.6Mbps/384Kbps
