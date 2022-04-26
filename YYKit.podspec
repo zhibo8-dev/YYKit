@@ -26,4 +26,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'Vendor/WebP.framework'
   
   s.dependency 'YYCache'
+  s.dependency 'YYText'
 end

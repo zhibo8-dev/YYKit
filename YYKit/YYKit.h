@@ -71,26 +71,7 @@ FOUNDATION_EXPORT const unsigned char YYKitVersionString[];
 #import <YYKit/MKAnnotationView+YYWebImage.h>
 #import <YYKit/CALayer+YYWebImage.h>
 
-#import <YYKit/YYLabel.h>
-#import <YYKit/YYTextView.h>
-#import <YYKit/YYTextAttribute.h>
-#import <YYKit/YYTextArchiver.h>
-#import <YYKit/YYTextParser.h>
-#import <YYKit/YYTextUtilities.h>
-#import <YYKit/YYTextRunDelegate.h>
-#import <YYKit/YYTextRubyAnnotation.h>
-#import <YYKit/NSAttributedString+YYText.h>
-#import <YYKit/NSParagraphStyle+YYText.h>
-#import <YYKit/UIPasteboard+YYText.h>
-#import <YYKit/YYTextLayout.h>
-#import <YYKit/YYTextLine.h>
-#import <YYKit/YYTextInput.h>
-#import <YYKit/YYTextDebugOption.h>
-#import <YYKit/YYTextContainerView.h>
-#import <YYKit/YYTextSelectionView.h>
-#import <YYKit/YYTextMagnifier.h>
-#import <YYKit/YYTextEffectWindow.h>
-#import <YYKit/YYTextKeyboardManager.h>
+#import <YYText/YYText.h>
 
 #import <YYKit/YYReachability.h>
 #import <YYKit/YYGestureRecognizer.h>
@@ -98,8 +79,6 @@ FOUNDATION_EXPORT const unsigned char YYKitVersionString[];
 #import <YYKit/YYKeychain.h>
 #import <YYKit/YYWeakProxy.h>
 #import <YYKit/YYTimer.h>
-#import <YYKit/YYTransaction.h>
-#import <YYKit/YYAsyncLayer.h>
 #import <YYKit/YYSentinel.h>
 #import <YYKit/YYDispatchQueuePool.h>
 #import <YYKit/YYThreadSafeArray.h>
@@ -162,26 +141,7 @@ FOUNDATION_EXPORT const unsigned char YYKitVersionString[];
 #import "MKAnnotationView+YYWebImage.h"
 #import "CALayer+YYWebImage.h"
 
-#import "YYLabel.h"
-#import "YYTextView.h"
-#import "YYTextAttribute.h"
-#import "YYTextArchiver.h"
-#import "YYTextParser.h"
-#import "YYTextUtilities.h"
-#import "YYTextRunDelegate.h"
-#import "YYTextRubyAnnotation.h"
-#import "NSAttributedString+YYText.h"
-#import "NSParagraphStyle+YYText.h"
-#import "UIPasteboard+YYText.h"
-#import "YYTextLayout.h"
-#import "YYTextLine.h"
-#import "YYTextInput.h"
-#import "YYTextDebugOption.h"
-#import "YYTextContainerView.h"
-#import "YYTextSelectionView.h"
-#import "YYTextMagnifier.h"
-#import "YYTextEffectWindow.h"
-#import "YYTextKeyboardManager.h"
+#import "YYText.h"
 
 #import "YYReachability.h"
 #import "YYGestureRecognizer.h"
@@ -189,8 +149,6 @@ FOUNDATION_EXPORT const unsigned char YYKitVersionString[];
 #import "YYKeychain.h"
 #import "YYWeakProxy.h"
 #import "YYTimer.h"
-#import "YYTransaction.h"
-#import "YYAsyncLayer.h"
 #import "YYSentinel.h"
 #import "YYDispatchQueuePool.h"
 #import "YYThreadSafeArray.h"
