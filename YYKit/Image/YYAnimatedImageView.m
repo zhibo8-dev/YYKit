@@ -149,6 +149,11 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
         _requestQueue = [[NSOperationQueue alloc] init];
         _requestQueue.maxConcurrentOperationCount = 1;
         _link = [CADisplayLink displayLinkWithTarget:[YYWeakProxy proxyWithTarget:self] selector:@selector(step:)];
+        if (@available(iOS 15.0, *)) {
+            _link.preferredFrameRateRange = CAFrameRateRangeMake(120, 120, 120);
+        } else {
+            // Fallback on earlier versions
+        }
         if (_runloopMode) {
             [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:_runloopMode];
         }
