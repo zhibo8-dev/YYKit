@@ -36,6 +36,7 @@ typedef NS_ENUM(NSUInteger, YYAnimatedImageType) {
 
 @interface YYAnimatedImageView() {
     @package
+    
     UIImage <YYAnimatedImage> *_curAnimatedImage;
     
     dispatch_semaphore_t _lock; ///< lock for _buffer
