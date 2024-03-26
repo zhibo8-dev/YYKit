@@ -264,6 +264,7 @@ static NSTimeInterval _yy_CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef 
 
 + (UIImage *)imageWithSize:(CGSize)size drawBlock:(void (^)(CGContextRef context))drawBlock {
     if (!drawBlock) return nil;
+    if (size.width <= 0 || size.height <= 0) return nil;
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     if (!context) return nil;
@@ -371,6 +372,8 @@ static NSTimeInterval _yy_CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef 
                           borderWidth:(CGFloat)borderWidth
                           borderColor:(UIColor *)borderColor
                        borderLineJoin:(CGLineJoin)borderLineJoin {
+    
+    if (self.size.width <= 0 || self.size.height <= 0) return nil;
     
     if (corners != UIRectCornerAllCorners) {
         UIRectCorner tmp = 0;
@@ -500,6 +503,7 @@ static NSTimeInterval _yy_CGImageSourceGetGIFFrameDelayAtIndex(CGImageSourceRef 
 }
 
 - (UIImage *)imageByTintColor:(UIColor *)color {
+    if (self.size.width <= 0 || self.size.height <= 0) return nil;
     UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     [color set];
@@ -723,6 +727,8 @@ static void _yy_cleanupBuffer(void *userData, void *buf_data) {
     if (!hasTint && !hasMask) {
         return [UIImage imageWithCGImage:effectCGImage];
     }
+    
+    if (size.width <= 0 || size.height <= 0) return nil;
     
     UIGraphicsBeginImageContextWithOptions(size, opaque, scale);
     CGContextRef context = UIGraphicsGetCurrentContext();

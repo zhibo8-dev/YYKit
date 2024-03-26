@@ -19,12 +19,15 @@ YYSYNTH_DUMMY_CLASS(CALayer_YYAdd)
 @implementation CALayer (YYAdd)
 
 - (UIImage *)snapshotImage {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [self renderInContext:context];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
+    if (self.bounds.size.width > 0 && self.bounds.size.height > 0) {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self renderInContext:context];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image;
+    }
+    return nil;
 }
 
 - (NSData *)snapshotPDF {
